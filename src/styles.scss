@@ -1,1 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  margin: 0;
+  padding: 8px;
+  display: block;
+  background-color: oklch(14.7% 0.004 49.25);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: oklch(98.4% 0.014 180.72);
+}
+
+p {
+  color: oklch(98.4% 0.014 180.72);
+}

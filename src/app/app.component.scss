@@ -1,0 +1,12 @@
+$base-padding: 8px;
+
+:host ::ng-deep body {
+  margin: 0;
+  padding: $base-padding;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

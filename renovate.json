@@ -1,0 +1,18 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["minor", "major"],
+      "reviewers": ["radosnystudent"]
+    }
+  ],
+  "automergeType": "branch",
+  "platformAutomerge": true,
+  "dependencyDashboard": true,
+  "schedule": ["every weekend"]
+}

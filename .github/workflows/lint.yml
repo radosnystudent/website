@@ -21,15 +21,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20.0
+          cache: "npm"
 
       - name: Install Node.js dependencies
         run: npm ci
 
-      - name: Run linters
-        uses: wearerequired/lint-action@v2
-        with:
-          eslint_dir: src/
-          eslint_extensions: js,jsx,ts,tsx
-          eslint: true
-          prettier: false
-          continue_on_error: false
+      - name: Run ESLint
+        run: npx eslint "src/**/*.{ts,html}" --ext .ts,.html

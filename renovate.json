@@ -14,5 +14,5 @@
   "automergeType": "branch",
   "platformAutomerge": true,
   "dependencyDashboard": true,
-  "schedule": ["every day"]
+  "schedule": ["0 22 * * *"]
 }

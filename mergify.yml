@@ -1,0 +1,18 @@
+pull_request_rules:
+  - name: Automerge approved PRs
+    conditions:
+      - base=master
+      - status-success=Run linters
+      - status-success=Build application
+      - -conflict
+    actions:
+      merge:
+        method: rebase
+
+  - name: Notify author about conflicts
+    conditions:
+      - base=master
+      - conflict
+    actions:
+      comment:
+        message: "@{{author}} Your PR is in conflict and cannot be merged."

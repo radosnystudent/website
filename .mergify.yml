@@ -2,6 +2,7 @@ pull_request_rules:
   - name: Automerge approved PRs
     conditions:
       - base=master
+      - approved-reviews-by=radosnystudent
       - status-success=Run linters
       - status-success=Build application
       - -conflict

@@ -11,11 +11,18 @@
   "packageRules": [
     {
       "matchUpdateTypes": ["patch"],
-      "automerge": true
+      "automerge": true,
+      "labels": ["patch"]
     },
     {
-      "matchUpdateTypes": ["minor", "major"],
-      "reviewers": ["radosnystudent"]
+      "matchUpdateTypes": ["minor"],
+      "reviewers": ["radosnystudent"],
+      "labels": ["minor"]
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "reviewers": ["radosnystudent"],
+      "labels": ["major"]
     }
   ],
   "automergeType": "pr",

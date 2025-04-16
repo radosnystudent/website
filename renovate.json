@@ -12,17 +12,17 @@
     {
       "matchUpdateTypes": ["patch"],
       "automerge": true,
-      "labels": ["patch"]
+      "addLabels": ["patch"]
     },
     {
       "matchUpdateTypes": ["minor"],
       "reviewers": ["radosnystudent"],
-      "labels": ["minor"]
+      "addLabels": ["minor"]
     },
     {
       "matchUpdateTypes": ["major"],
       "reviewers": ["radosnystudent"],
-      "labels": ["major"]
+      "addLabels": ["major"]
     }
   ],
   "automergeType": "pr",

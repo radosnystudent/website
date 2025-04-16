@@ -5,14 +5,16 @@
   "rebaseWhen": "behind-base-branch",
   "lockFileMaintenance": {
     "enabled": true,
-    "automerge": true
+    "automerge": true,
+    "addLabels": ["lockfile"]
   },
   "labels": ["dependencies", "npm"],
   "packageRules": [
     {
       "matchUpdateTypes": ["patch"],
       "automerge": true,
-      "addLabels": ["patch"]
+      "addLabels": ["patch"],
+      "autoApprove": true
     },
     {
       "matchUpdateTypes": ["minor"],
@@ -23,10 +25,30 @@
       "matchUpdateTypes": ["major"],
       "reviewers": ["radosnystudent"],
       "addLabels": ["major"]
+    },
+    {
+      "matchUpdateTypes": ["pin"],
+      "automerge": true,
+      "addLabels": ["pin"],
+      "autoApprove": true
+    },
+    {
+      "matchUpdateTypes": ["digest"],
+      "automerge": true,
+      "addLabels": ["digest"],
+      "autoApprove": true
+    },
+    {
+      "matchUpdateTypes": ["bump"],
+      "automerge": true,
+      "addLabels": ["bump"],
+      "autoApprove": true
     }
   ],
   "automergeType": "pr",
   "platformAutomerge": true,
   "dependencyDashboard": true,
-  "schedule": ["at any time"]
+  "schedule": ["at any time"],
+  "prNotPendingHours": 24,
+  "stabilityDays": 0
 }

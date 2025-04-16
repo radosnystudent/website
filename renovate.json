@@ -49,6 +49,6 @@
   "platformAutomerge": true,
   "dependencyDashboard": true,
   "schedule": ["at any time"],
-  "prNotPendingHours": 24,
+  "prNotPendingHours": 8,
   "stabilityDays": 0
 }
